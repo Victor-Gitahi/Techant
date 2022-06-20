@@ -36,7 +36,7 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-      opacity: .5;
+      opacity: .4;
     }
   }
   &__content {
@@ -49,11 +49,12 @@
     }
     h2:nth-child(2) {
       font-weight: 500;
-      margin: 1rem 0;
+      transform: translateY(10px);
       letter-spacing: 4px;
       font-size: clamp(1.5rem, 1.5rem + 1.5vw, 3.4rem);
     }
     p {
+      transform: translateY(10px);
       font-weight: 300;
       font-size: 1rem;
       font-family: var(--font-primary);
@@ -77,6 +78,24 @@
       background-color: var(--btn-primary-bg-color);
     }
   }
+  .social-section {
+    transform: translateY(20px);
+    @include flex(space-around, center, row);
+    .icon {
+      cursor: pointer;
+      transition: all .3s ease;
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+      &:hover {
+        transform: translateY(-10px);
+      }
+      &:hover svg {
+        fill: #fff;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -86,6 +105,23 @@
     }
     &__btn {
       margin: 0 .5rem;
+    }
+    .social-section {
+      transform: translateY(70px);
+      .icon {
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+    &__content {
+      h2:nth-child(2) {
+        margin: 2rem 0;
+      }
+      p {
+        margin-bottom: 2rem;
+      }
     }
   }
 }

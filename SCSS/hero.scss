@@ -1,0 +1,20 @@
+:root {
+  --bg-color: #fff;
+  --text-primary-color: #212121;
+  --text-secondary-color: #9d09ff;
+  --btn-primary-bg-color: #e6c400;
+  --btn-primary-text-color: #ffffff;
+  --font-primary: 'Montserrat';
+  --font-logo: 'Promesh';
+  --font-secondary: 'Punta';
+  // paddings
+  --padding-min: .5rem;
+  --padding-max: 1.25rem;
+}
+
+@mixin flex($justify_content, $align_items, $flex_direction) {
+  display: flex;
+  justify-content: $justify_content;
+  align-items: $align_items;
+  flex-direction: $flex_direction;
+}

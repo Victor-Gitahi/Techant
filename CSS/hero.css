@@ -1,1 +1,12 @@
-/*# sourceMappingURL=hero.css.map */
+:root {
+  --bg-color: #fff;
+  --text-primary-color: #212121;
+  --text-secondary-color: #9d09ff;
+  --btn-primary-bg-color: #e6c400;
+  --btn-primary-text-color: #ffffff;
+  --font-primary: "Montserrat";
+  --font-logo: "Promesh";
+  --font-secondary: "Punta";
+  --padding-min: .5rem;
+  --padding-max: 1.25rem;
+}/*# sourceMappingURL=hero.css.map */

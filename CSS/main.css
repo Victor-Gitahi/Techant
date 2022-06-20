@@ -8,6 +8,7 @@
   --bg-color: #fff;
   --nav-bg-color: #212121;
   --nav-text-color: #fff;
+  --nav-icon-color: #e6c400;
   --text-primary-color: #212121;
   --logo-color: hsl(0, 0%, 100%);
   --btn-primary-bg-color: #e6c400;
@@ -18,6 +19,7 @@
   --font-secondary: "Punta";
   --padding-min: .5rem;
   --padding-max: 1.25rem;
+  --medium-screen: 57.5625rem;
 }
 
 body {
@@ -56,7 +58,48 @@ a {
   outline: transparent;
 }
 
+.custom-menu-btn,
+.custom-menu-btn::after,
+.custom-menu-btn::before {
+  height: 3px;
+  width: 2rem;
+  background-color: var(--nav-icon-color);
+  border-radius: 2px;
+}
+
+.custom-menu-btn {
+  position: relative;
+}
+.custom-menu-btn::after, .custom-menu-btn::before {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.custom-menu-btn::before {
+  transform: translateY(-7px) translateX(0);
+  width: 50%;
+}
+.custom-menu-btn::after {
+  width: 50%;
+  right: 0;
+  transform: translateY(7px);
+}
+
+.menu-icon-container {
+  height: 2rem;
+  width: 2rem;
+  cursor: pointer;
+  display: none;
+}
+.menu-icon-container:hover .custom-menu-btn::before {
+  transform: translateY(-7px) translateX(1rem);
+}
+.menu-icon-container:hover .custom-menu-btn::after {
+  transform: translateY(7px) translateX(-1rem);
+}
+
 .navbar {
+  position: relative;
   background-color: var(--nav-bg-color);
   padding: 1rem 1.5rem;
   display: flex;
@@ -110,4 +153,49 @@ a {
 .navbar__link:hover::before {
   width: 130%;
   transform-origin: right;
+}
+.navbar-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  visibility: hidden;
+  opacity: 0;
+}
+.navbar-icon svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: var(--nav-icon-color);
+}
+
+@media screen and (max-width: 57.5625rem) {
+  .navbar__links-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--nav-bg-color);
+  }
+  .navbar-icon {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .menu-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 22rem) {
+  .navbar-icon {
+    right: 1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -76,6 +76,7 @@
     background-color: transparent;
     &:hover {
       background-color: var(--btn-primary-bg-color);
+      transform: translateY(-3px);
     }
   }
   .social-section {
@@ -89,7 +90,7 @@
         width: 20px;
       }
       &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
       }
       &:hover svg {
         fill: #fff;

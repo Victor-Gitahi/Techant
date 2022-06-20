@@ -74,6 +74,7 @@
 }
 .hero__btn:hover {
   background-color: var(--btn-primary-bg-color);
+  transform: translateY(-3px);
 }
 .hero .social-section {
   transform: translateY(20px);
@@ -91,7 +92,7 @@
   width: 20px;
 }
 .hero .social-section .icon:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
 }
 .hero .social-section .icon:hover svg {
   fill: #fff;

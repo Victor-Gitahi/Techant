@@ -1,0 +1,22 @@
+:root {
+    --bg-color: #fff;
+    --nav-bg-color: #030202;
+    --nav-bg-color-transparent: #000000e0;
+    --nav-text-color: #fff;
+    --nav-icon-color: #e6c400;
+    --text-primary-color: #212121;
+    --logo-color: hsl(0, 0%, 100%);
+    --btn-primary-bg-color: #e6c400;
+    --btn-primary-text-color: #ffffff;
+    --link-underline-color: #e6c400;
+    --font-primary: "Montserrat";
+    --font-logo: "Promesh";
+    --font-secondary: "Punta";
+    --padding-min: .5rem;
+    --padding-max: 1.25rem;
+    --medium-screen: 57.5625rem;
+}
+
+.navbar {
+    background-color: var(--nav-bg-color);
+}

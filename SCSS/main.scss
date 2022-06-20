@@ -6,7 +6,8 @@
 
 :root {
   --bg-color: #fff;
-  --nav-bg-color: #212121;
+  --nav-bg-color: #030202;
+  --nav-bg-color-transparent: #000000e0;
   --nav-text-color: #fff;
   --nav-icon-color: #e6c400;
   --text-primary-color: #212121;
@@ -113,8 +114,12 @@ a {
 
 .navbar {
   position: relative;
-  background-color: var(--nav-bg-color);
+  background-color: transparent;
   padding: 1rem 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
   @include flex(space-between, center, row);
   .logo {
     font-family: var(--font-logo);
@@ -187,7 +192,8 @@ a {
       position: absolute;
       top: 0;
       right: 0;
-      background-color: var(--nav-bg-color);
+      background-color: var(--nav-bg-color-transparent);
+      backdrop-filter: blur(5px);
       &.show {
         transform: translateY(0);
       }

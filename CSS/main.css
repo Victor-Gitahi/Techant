@@ -2,4 +2,112 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #fff;
+  --nav-bg-color: #212121;
+  --nav-text-color: #fff;
+  --text-primary-color: #212121;
+  --logo-color: hsl(0, 0%, 100%);
+  --btn-primary-bg-color: #e6c400;
+  --btn-primary-text-color: #ffffff;
+  --link-underline-color: #e6c400;
+  --font-primary: "Montserrat";
+  --font-logo: "Promesh";
+  --font-secondary: "Punta";
+  --padding-min: .5rem;
+  --padding-max: 1.25rem;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border: none;
+  outline: 0.15rem solid transparent;
+  border-radius: 5px;
+  padding: var(--padding-min) var(--padding-max);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn a {
+  color: var(--btn-primary-text-color);
+}
+.btn-primary {
+  font-size: x-small;
+  background-color: var(--btn-primary-bg-color);
+  color: var(--btn-primary-text-color);
+  font-weight: bold;
+  padding: calc(var(--padding-min) * 1.5) calc(var(--padding-max) * 1.5);
+}
+.btn-nav {
+  background-color: transparent;
+  outline: 0.15rem solid var(--btn-primary-bg-color);
+}
+.btn-nav:hover {
+  background-color: var(--btn-primary-bg-color);
+  outline: transparent;
+}
+
+.navbar {
+  background-color: var(--nav-bg-color);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.navbar .logo {
+  font-family: var(--font-logo);
+  color: var(--logo-color);
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.navbar__links-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none;
+  width: 40%;
+}
+.navbar__link {
+  font-family: var(--font-primary);
+  font-size: x-small;
+  color: var(--nav-text-color);
+  position: relative;
+}
+.navbar__link::after, .navbar__link::before {
+  content: "";
+  position: absolute;
+  height: 0.105rem;
+  width: 0;
+  background-color: var(--link-underline-color);
+  transition: all 0.2s ease;
+}
+.navbar__link::after {
+  bottom: -0.5rem;
+  left: -15%;
+}
+.navbar__link:hover::after {
+  width: 130%;
+  transform-origin: left;
+}
+.navbar__link::before {
+  top: -0.5rem;
+  right: -15%;
+  transition-delay: 0.15s;
+}
+.navbar__link:hover::before {
+  width: 130%;
+  transform-origin: right;
 }/*# sourceMappingURL=main.css.map */
